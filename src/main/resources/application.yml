@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: bell-gitlab
+  data:
+    mongodb:
+      host: 10.0.31.25
+      port: 40000
+      database: bell
+      username: nicolas
+      password: cpfwmsx
+#      host: 127.0.0.1
+#      port: 27017
+#      database: bell
+#      username: 
+#      password: 
+  thymeleaf:
+    enabled: true
+    cache: false
+    check-template: true
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+    servlet:
+      content-type: text/html
+server:
+  port: 8080
+  

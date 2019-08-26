@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>个人设置</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+<link rel="stylesheet" href="https://jqweui.cn/dist/demos/css/demos.css">
+</head>
+<body ontouchstart>
+	<header class='demos-header'>
+      <h1 class="demos-title">个人信息</h1>
+    </header>
+    <div class="page__bd">
+    	<div class="weui-panel weui-panel_access">
+        <div class="weui-panel__hd">VIP <label id="vip_label">未开通</label></div>
+        <div class="weui-panel__bd">
+          <div class="weui-media-box weui-media-box_text">
+            <h4 class="weui-media-box__title">VIP头像</h4>
+            <p class="weui-media-box__desc">您可以自定义VIP头像。</p>
+          </div>
+          <div class="weui-media-box weui-media-box_text">
+            <h4 class="weui-media-box__title">VIP事件特效</h4>
+            <p class="weui-media-box__desc">提交代码您可以拥有自定义特效。</p>
+          </div>
+        </div>
+        <div class="weui-panel__ft">
+          <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link">
+            <div class="weui-cell__bd">查看更多</div>
+            <span class="weui-cell__ft"></span>
+          </a>    
+        </div>
+      </div>
+    </div>
+    
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+<script th:inline="javascript">
+var userResult = [[${userResult}]];
+console.info(userResult);
+</script>
+</body>
+</html>
