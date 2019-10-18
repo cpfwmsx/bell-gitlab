@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>代码机器人监听中</title>
-<link rel="stylesheet" href="/weui/1.1.3/style/weui.min.css">
+<link rel="stylesheet" href="/weui/2.1.2/style/weui.min.css">
 <link rel="stylesheet" href="/jquery-weui/1.2.1/css/jquery-weui.min.css">
 <link rel="stylesheet" href="/css/demos.css">
 </head>
@@ -62,17 +62,36 @@ var pb = $.photoBrowser({
   });
 
 var count = 0;
-var start = "http://lol.52pk.com/pifu/sounds/qita/1.mp3";
-var shuangsha = "http://lol.52pk.com/pifu/sounds/qita/2.mp3";
-var sansha = "http://lol.52pk.com/pifu/sounds/qita/3.mp3";
-var sisha = "http://lol.52pk.com/pifu/sounds/qita/4.mp3";
-var wusha = "http://lol.52pk.com/pifu/sounds/qita/5.mp3";
-var liusha = "http://lol.52pk.com/pifu/sounds/qita/6.mp3";
-var qisha = "http://lol.52pk.com/pifu/sounds/qita/7.mp3";
-var basha = "http://lol.52pk.com/pifu/sounds/qita/8.mp3";
-var chaoshen = "http://lol.52pk.com/pifu/sounds/qita/9.mp3";
-var dog = "/sounds/5751.wav";
-var wz_wusha = "/sounds/5_kill.mp3";
+var start = "/sounds/start.mp3";
+var goujiao = "/sounds/goujiao.wav";
+//悲伤大提琴
+var s1 = "/sounds/beishang.mp3";
+//超神
+var s2 = "/sounds/chaoshen.mp3";
+//赌神
+var s3 = "/sounds/dushen.mp3";
+//狗叫
+var s4 = "/sounds/goujiao.mp3";
+//好运姐
+var s5 = "/sounds/haoyunjie_ea.mp3";
+//警报1
+var s6 = "/sounds/jingbao1.mp3";
+//金馆长
+var s7 = "/sounds/jinguanzhang.mp3";
+//墨镜链子
+var s8 = "/sounds/mojinglianzi.mp3";
+//他妈了隔壁
+var s9 = "/sounds/tamalegeb.mp3";
+//停不下来
+var s10 = "/sounds/tingbuxialai.mp3";
+//土拨鼠
+var s11 = "/sounds/tuboshu.mp3";
+//我怎么这么好看
+var s12 = "/sounds/wozenmezhemehaokan.mp3";
+//yosemite
+var s13 = "/sounds/yosemite.mp3";
+//岳云鹏，打死你个龟孙
+var s14 = "/sounds/yueyunpengdsnggs.mp3";
 //厄运小姐：这是我的两把枪，一把叫射，另一把叫啊，怎么样，喜欢吗
 var eyunxiaojie_ea = "/sounds/haoyunjie_ea.mp3";
 
@@ -80,27 +99,37 @@ function playit(email, text){
 	if(count == 1){
 		$("#ado").attr("src", start);
 	}else if(count == 2){
-		$("#ado").attr("src", shuangsha);
+		$("#ado").attr("src", s1);
 	}else if(count == 3){
-		$("#ado").attr("src", sansha);
+		$("#ado").attr("src", s2);
 	}else if(count == 4){
-		$("#ado").attr("src", sisha);
+		$("#ado").attr("src", s3);
 	}else if(count == 5){
-		$("#ado").attr("src", wusha);
+		$("#ado").attr("src", s4);
 	}else if(count == 6){
-		$("#ado").attr("src", liusha);
+		$("#ado").attr("src", s5);
 	}else if(count == 7){
-		$("#ado").attr("src", qisha);
+		$("#ado").attr("src", s6);
 	}else if(count == 8){
-		$("#ado").attr("src", basha);
-	}else if(count > 8){
-		$("#ado").attr("src", "/voice/5686.mp3");
+		$("#ado").attr("src", s7);
+	}else if(count == 9){
+		$("#ado").attr("src", s8);
+	}else if(count == 10){
+		$("#ado").attr("src", s9);
+	}else if(count == 11){
+		$("#ado").attr("src", s10);
+	}else if(count == 12){
+		$("#ado").attr("src", s11);
+	}else if(count == 13){
+		$("#ado").attr("src", s12);
+	}else if(count >= 14){
+		$("#ado").attr("src", s13);
 		count = 1;
 	}
 	if(email == "zhengyujin@youlanw.com"){
 		$("#ado").attr("src", eyunxiaojie_ea);
 	}else if(email == "liyong@banmazgai.com"){
-		$("#ado").attr("src", wz_wusha);
+		$("#ado").attr("src", s14);
 	}
 	document.getElementById("ado").play();
 	count ++;
